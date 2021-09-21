@@ -1,0 +1,29 @@
+@mixin white-box {
+  background-color: $color-white;
+  padding: 3rem;
+  box-shadow: 0 1rem 2rem $color-black-t-lighter;
+  border-radius: 0.4rem;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == sc-smallest {
+    @media only screen and (max-width: 35em) {
+      @content;
+    } //560px
+  }
+  @if $breakpoint == sc-small {
+    @media only screen and (max-width: 50em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == sc-medium {
+    @media only screen and (max-width: 66.25em) {
+      @content;
+    } //1060px
+  }
+  @if $breakpoint == sc-large {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+}

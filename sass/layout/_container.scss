@@ -1,0 +1,15 @@
+.container {
+  max-width: 120rem;
+  background-color: $color-gray-light-1;
+  margin: 8rem auto;
+  box-shadow: 0 2rem 6rem $color-black-t-medium;
+  border-radius: 0.4rem;
+  overflow: hidden;
+
+  @include respond(sc-large){
+    margin: 0;
+    border-radius: 0;
+    max-width: 100%; 
+    width: 100%;
+  }
+}

@@ -1,0 +1,81 @@
+.hotel-view {
+  background-color: $color-white;
+  flex: 1;
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+
+  &__image {
+    width: 100%;
+    display: block;
+  }
+}
+
+.overview {
+  display: flex;
+  align-items: center;
+  border-bottom: $line-gray;
+
+  &__title {
+    padding: 1rem 3rem;
+    
+    @include respond(sc-smallest) {
+      flex: 0 0 100%;
+      padding: 0.5rem 2rem;
+      padding-top: 1.5rem;
+    }
+  }
+
+  &__stars {
+    flex: 1;
+    display: flex;
+
+    @include respond(sc-smallest){
+      margin-left: 2rem;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    fill: $color-primary;
+  }
+
+  &__location {
+    display: flex;
+
+    :first-child {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__rating {
+    background: $color-primary;
+    align-self: stretch;
+    margin-left: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    color: $color-white;
+  }
+
+  &__average {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: -0.5rem 0;
+
+    @include respond(sc-smallest) {
+      font-size: 2rem;
+    }
+  }
+
+  @include respond(sc-smallest) {
+    flex-wrap: wrap;
+  }
+}

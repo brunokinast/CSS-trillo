@@ -1,0 +1,30 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $color-gray-dark-2;
+}
+
+.heading {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+
+  @include respond(sc-smallest) {
+    font-size: 2rem;
+  }
+}
+
+.paragraph {
+  font-size: 1.4rem;
+
+  &:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+}
+
+.note {
+  font-size: 1.3rem;
+  color: $color-gray-dark-3;
+}

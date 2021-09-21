@@ -1,0 +1,137 @@
+.header {
+  background-color: $color-white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  border-bottom: $line-gray;
+  
+  @include respond(sc-smallest) {
+    flex-wrap: wrap;
+    border-bottom: none;
+  }
+}
+
+.logo {
+  height: 4rem;
+  margin: 0 2rem;
+
+  cursor: pointer;
+}
+
+.search {
+  flex: 0 0 40%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -0.8rem;
+
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+
+    transition: all 0.2s;
+    width: 90%;
+    border: none;
+    border-radius: 20rem;
+    background-color: $color-gray-light-2;
+    padding: 0.7rem 1.5rem;
+    margin-right: -3.5rem;
+
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: $color-gray-light-3;
+    }
+
+    &::placeholder {
+      color: $color-gray-light-4;
+    }
+  }
+
+  &__input:focus + &__submit {
+    background-color: $color-gray-light-3;
+  }
+
+  &__submit {
+    border: none;
+    background-color: $color-gray-light-2;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  &__icon {
+    $size: 2rem;
+    height: $size;
+    width: $size;
+    fill: $color-gray-dark-3;
+  }
+
+  @include respond(sc-smallest) {
+    flex: 0 0 100%;
+    order: 1;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+.user-nav {
+  display: flex;
+  align-self: stretch;
+  user-select: none;
+
+  &__icon-box {
+    align-self: stretch;
+    display: flex;
+    padding: 0 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.2s;
+
+    align-items: center;
+
+    &:hover {
+      background-color: $color-gray-light-3;
+      transition: background-color 0.1s;
+    }
+
+    &:active {
+      background-color: darken($color-gray-light-3, 2);
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: $color-white;
+
+    background-color: $color-primary;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+  }
+
+  &__icon {
+    height: 3rem;
+    width: 3rem;
+    fill: $color-gray-dark-2;
+  }
+
+  &__user-image {
+    $size: 5rem;
+    height: $size;
+    width: $size;
+    border-radius: 50%;
+    margin: .5rem 0;
+    margin-right: 1rem;
+  }
+}
